@@ -1,0 +1,164 @@
+TRACE 2016/04/04 08:50:34.577204 config.go:100: .shipped directory already exists
+TRACE 2016/04/04 08:50:34.577326 config.go:109: Config file .shipped/shipped.ini already exists in /Users/patrick
+TRACE 2016/04/04 08:50:34.577402 config.go:139: Using config file /Users/patrick/.shipped/shipped.ini
+TRACE 2016/04/04 08:50:34.583339 config.go:189: Set value apiToken=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh in /Users/patrick/.shipped/shipped.ini
+TRACE 2016/04/04 08:50:34.583424 main.go:172: CLI start directory is /Users/patrick/workspace/train/Train/train_example
+TRACE 2016/04/04 08:50:34.583489 config.go:139: Using config file /Users/patrick/workspace/train/Train/train_example/.shipped/shipped.ini
+TRACE 2016/04/04 08:50:34.583537 config.go:148: Also using project config file /Users/patrick/workspace/train/Train/.shipped/shipped.ini
+TRACE 2016/04/04 08:50:34.585234 config.go:158: Also using home config file /Users/patrick/.shipped/shipped.ini
+TRACE 2016/04/04 08:50:34.587763 utils.go:98: Console width is 80; help width is 79
+TRACE 2016/04/04 08:50:34.587852 main.go:137: Shipped-cli 1.0 b139 20160219 170955 starting with args struct { BootLogfile string; ConfigFile string; ConsoleMode bool; Debug bool; Expanded bool; FastBootstrap bool; Force bool; Full bool; Help bool; Json bool; Latest bool; LocalDocker bool; Logfile string; MockSDKClient bool; OutputFields string; RunAsRootOK bool; ShippedHome string; ShowVersion bool; Server string; Token string; VM string; ObjType string; Command string; Arguments []string }{BootLogfile:"", ConfigFile:"", ConsoleMode:false, Debug:false, Expanded:true, FastBootstrap:false, Force:false, Full:false, Help:false, Json:false, Latest:false, LocalDocker:false, Logfile:"/Users/patrick/workspace/train/Train/train_example/shipped-cli.log", MockSDKClient:false, OutputFields:"", RunAsRootOK:false, ShippedHome:"", ShowVersion:false, Server:"https://api.ciscoshipped.io/", Token:"EVKmPewPFTelyGlPTwJKTwBrciVXJZVh", VM:"vagrant", ObjType:"Local", Command:"bootstrap", Arguments:[]string{"7722e7db-fa7a-11e5-ab72-0242ac1103f9"}}
+TRACE 2016/04/04 08:50:34.587871 commands.go:92: Running command(Local) subcommand(bootstrap) args([]string{"7722e7db-fa7a-11e5-ab72-0242ac1103f9"}) help(false)
+TRACE 2016/04/04 08:50:34.587887 commands.go:160: objDesc.Name = "Local"
+TRACE 2016/04/04 08:50:34.587973 local.go:275: Starting LocalService.Bootstrap()
+TRACE 2016/04/04 08:50:34.588014 projects.go:273: Directory  contains a .shipped directory
+TRACE 2016/04/04 08:50:34.588057 projects.go:273: Directory /Users/patrick/workspace/train/Train contains a .shipped directory
+TRACE 2016/04/04 08:50:34.588094 projects.go:309: Changed to project directory /Users/patrick/workspace/train
+TRACE 2016/04/04 08:50:34.588139 config.go:134: Can't find config file /Users/patrick/workspace/train/.shipped/shipped.ini (open /Users/patrick/workspace/train/.shipped/shipped.ini: no such file or directory)
+TRACE 2016/04/04 08:50:34.588180 client.go:114: GET https://api.ciscoshipped.io/projects/7722e7db-fa7a-11e5-ab72-0242ac1103f9?api_token=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh
+TRACE 2016/04/04 08:50:35.383633 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/04/04 08:50:35.383904 client.go:114: GET https://api.ciscoshipped.io/projects/7722e7db-fa7a-11e5-ab72-0242ac1103f9/services?api_token=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh
+TRACE 2016/04/04 08:50:36.116917 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/04/04 08:50:36.117306 common.go:67: Project 7722e7db-fa7a-11e5-ab72-0242ac1103f9 (Train) has 1 services
+TRACE 2016/04/04 08:50:36.117336 bootstrap.go:62: Starting bootstrap on server(https://api.ciscoshipped.io/) for project(7722e7db-fa7a-11e5-ab72-0242ac1103f9) with token(EVKmPewPFTelyGlPTwJKTwBrciVXJZVh)
+TRACE 2016/04/04 08:50:36.117349 bootstrap.go:69: Obtaining platform-specific deployer...
+TRACE 2016/04/04 08:50:36.117720 bootstrap.go:77: Starting pre-verification...
+TRACE 2016/04/04 08:50:36.117770 client.go:114: POST https://api.ciscoshipped.io/cli/7722e7db-fa7a-11e5-ab72-0242ac1103f9/status/project_init?api_token=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh
+TRACE 2016/04/04 08:50:36.831198 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/04/04 08:50:36.831443 common.go:30: Pre-Verification Start
+TRACE 2016/04/04 08:50:36.831569 common.go:36: Pre-Verification End
+TRACE 2016/04/04 08:50:36.831591 macdeployer.go:142: git Installation check
+TRACE 2016/04/04 08:50:36.831695 command.go:59: Executing command: git --version
+TRACE 2016/04/04 08:50:36.840582 deployer.go:225: git version 2.5.4 (Apple Git-61)
+TRACE 2016/04/04 08:50:36.840731 macdeployer.go:142: git Installation check
+TRACE 2016/04/04 08:50:36.840824 command.go:59: Executing command: git --version
+TRACE 2016/04/04 08:50:36.846186 deployer.go:225: git version 2.5.4 (Apple Git-61)
+2016/04/04 08:50:36.846290 deployer.go:100: git 2.5.4 is already installed.
+TRACE 2016/04/04 08:50:36.846356 command.go:23: Executing command: git config --global --list
+2016/04/04 08:50:36.851457 bootstrap.go:317: ============================================================
+2016/04/04 08:50:36.851483 bootstrap.go:318: Check prerequisite software
+2016/04/04 08:50:36.851493 bootstrap.go:319: ============================================================
+TRACE 2016/04/04 08:50:36.851499 macdeployer.go:142: virtualbox Installation check
+TRACE 2016/04/04 08:50:36.851581 command.go:59: Executing command: vboxmanage --version
+TRACE 2016/04/04 08:50:36.864709 deployer.go:225: 5.0.16r105871
+2016/04/04 08:50:36.865579 macdeployer.go:43: virtualbox 5.0.16r105871 is already installed.
+TRACE 2016/04/04 08:50:36.865679 client.go:114: POST https://api.ciscoshipped.io/cli/7722e7db-fa7a-11e5-ab72-0242ac1103f9/status/install_vbox?api_token=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh
+TRACE 2016/04/04 08:50:37.574547 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/04/04 08:50:37.574871 macdeployer.go:142: vagrant Installation check
+TRACE 2016/04/04 08:50:37.574951 command.go:59: Executing command: vagrant --version
+TRACE 2016/04/04 08:50:37.826123 deployer.go:225: Vagrant 1.8.1
+2016/04/04 08:50:37.828831 deployer.go:100: vagrant 1.8.1 is already installed.
+TRACE 2016/04/04 08:50:37.828902 client.go:114: POST https://api.ciscoshipped.io/cli/7722e7db-fa7a-11e5-ab72-0242ac1103f9/status/install_vagrant?api_token=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh
+TRACE 2016/04/04 08:50:38.543354 client.go:159: Request status code 200 (200 OK)
+2016/04/04 08:50:38.543678 bootstrap.go:317: ============================================================
+2016/04/04 08:50:38.543715 bootstrap.go:318: Cloning Repositories
+2016/04/04 08:50:38.543743 bootstrap.go:319: ============================================================
+TRACE 2016/04/04 08:50:38.543766 common.go:109: Cloning Repositories Start
+TRACE 2016/04/04 08:50:38.544013 config.go:100: .shipped directory already exists
+TRACE 2016/04/04 08:50:38.544064 config.go:109: Config file .shipped/shipped.ini already exists in /Users/patrick/workspace/train/Train
+TRACE 2016/04/04 08:50:38.544251 config.go:139: Using config file /Users/patrick/workspace/train/Train/.shipped/shipped.ini
+TRACE 2016/04/04 08:50:38.544364 config.go:158: Also using home config file /Users/patrick/.shipped/shipped.ini
+TRACE 2016/04/04 08:50:38.549664 config.go:189: Set value projectId=7722e7db-fa7a-11e5-ab72-0242ac1103f9 in /Users/patrick/workspace/train/Train/.shipped/shipped.ini
+TRACE 2016/04/04 08:50:38.557258 config.go:189: Set value projectName=Train in /Users/patrick/workspace/train/Train/.shipped/shipped.ini
+TRACE 2016/04/04 08:50:38.557287 common.go:216: Created Train/.shipped/shipped.ini with projectId=7722e7db-fa7a-11e5-ab72-0242ac1103f9 and projectName=Train
+TRACE 2016/04/04 08:50:38.557371 config.go:134: Can't find config file /Users/patrick/workspace/train/.shipped/shipped.ini (open /Users/patrick/workspace/train/.shipped/shipped.ini: no such file or directory)
+2016/04/04 08:50:38.557423 common.go:158: Looks like service 1 train-example is already cloned - found .git directory in /Users/patrick/workspace/train/Train/train_example
+TRACE 2016/04/04 08:50:38.557433 common.go:196: Cloning Repositories End
+2016/04/04 08:50:38.557456 bootstrap.go:317: ============================================================
+2016/04/04 08:50:38.557483 bootstrap.go:318: Download Configuration
+2016/04/04 08:50:38.557501 bootstrap.go:319: ============================================================
+TRACE 2016/04/04 08:50:38.557512 common.go:260: downloadScripts URL: https://api.ciscoshipped.io//cli/7722e7db-fa7a-11e5-ab72-0242ac1103f9
+TRACE 2016/04/04 08:50:38.557920 download.go:70: Starting download of https://api.ciscoshipped.io//cli/7722e7db-fa7a-11e5-ab72-0242ac1103f9/Vagrantfile?api_token=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh to Train/.shipped/Vagrantfile
+TRACE 2016/04/04 08:50:39.442073 download.go:107: Download of Vagrantfile complete; -1 bytes downloaded.
+TRACE 2016/04/04 08:50:39.442237 download.go:70: Starting download of https://api.ciscoshipped.io//cli/7722e7db-fa7a-11e5-ab72-0242ac1103f9/docker-compose.yml?api_token=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh to Train/.shipped/docker-compose.yml
+TRACE 2016/04/04 08:50:39.797808 download.go:107: Download of docker-compose.yml complete; -1 bytes downloaded.
+TRACE 2016/04/04 08:50:39.798131 common.go:455: Created Vagrantfile.LocalDocker
+TRACE 2016/04/04 08:50:39.801282 command.go:59: Executing command: git -C Train/train_example reset .
+TRACE 2016/04/04 08:50:39.809960 download.go:70: Starting download of https://api.ciscoshipped.io//cli/7722e7db-fa7a-11e5-ab72-0242ac1103f9/9254a7a6-fa7a-11e5-94a5-0242ac110859/drone.sec?api_token=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh to Train/train_example/.drone.sec
+TRACE 2016/04/04 08:50:40.174257 download.go:107: Download of .drone.sec complete; -1 bytes downloaded.
+TRACE 2016/04/04 08:50:40.174353 command.go:59: Executing command: git -C Train/train_example add .drone.sec
+TRACE 2016/04/04 08:50:40.207525 command.go:59: Executing command: git -C Train/train_example commit -m **Shipped -- Add Drone Configuration
+2016/04/04 08:50:40.240432 util.go:97: [master ab76f29] **Shipped -- Add Drone Configuration
+2016/04/04 08:50:40.240459 util.go:97:  1 file changed, 1 insertion(+), 1 deletion(-)
+2016/04/04 08:50:40.240471 util.go:97:  rewrite .drone.sec (100%)
+2016/04/04 08:50:40.240716 common.go:379: Verifed all configuration files for project
+TRACE 2016/04/04 08:50:40.240777 client.go:114: POST https://api.ciscoshipped.io/cli/7722e7db-fa7a-11e5-ab72-0242ac1103f9/status/download_cli?api_token=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh
+TRACE 2016/04/04 08:50:40.430271 client.go:159: Request status code 200 (200 OK)
+2016/04/04 08:50:40.430874 bootstrap.go:317: ============================================================
+2016/04/04 08:50:40.430931 bootstrap.go:318: Bootstrap Sandbox VM
+2016/04/04 08:50:40.430966 bootstrap.go:319: ============================================================
+TRACE 2016/04/04 08:50:40.431162 util.go:62: Changed directory to Train/.shipped
+TRACE 2016/04/04 08:50:40.431357 command.go:23: Executing command: vagrant status
+TRACE 2016/04/04 08:50:44.057651 vagrantUp.go:68: Halting virtual machine so it can be refreshed
+TRACE 2016/04/04 08:50:44.057747 command.go:59: Executing command: vagrant halt
+2016/04/04 08:50:47.168858 vagrantUp.go:122: ==> train_example: Stopping container...
+2016/04/04 08:50:49.067418 vagrantUp.go:122: ==> dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Attempting graceful shutdown of VM...
+TRACE 2016/04/04 08:50:54.615042 vagrantUp.go:75: Bringing up virtual machine
+TRACE 2016/04/04 08:50:54.615139 command.go:59: Executing command: vagrant up --no-parallel --provider=docker
+2016/04/04 08:50:56.833813 vagrantUp.go:122: Bringing machine 'train_example' up with 'docker' provider...
+2016/04/04 08:50:57.079696 vagrantUp.go:122: ==> train_example: Docker host is required. One will be created if necessary...
+2016/04/04 08:50:57.174424 vagrantUp.go:122:     train_example: Vagrant will now create or start a local VM to act as the Docker
+2016/04/04 08:50:57.174455 vagrantUp.go:122:     train_example: host. You'll see the output of the `vagrant up` for this VM below.
+2016/04/04 08:50:57.175170 vagrantUp.go:122:     train_example:  
+2016/04/04 08:50:58.440661 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Clearing any previously set forwarded ports...
+TRACE 2016/04/04 08:50:59.438567 vagrantUp.go:105: Found port collision: deployed(2735) configured(2203) (    dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Fixed port collision for 2735 => 2375. Now on port 2203.
+)
+2016/04/04 08:50:59.438651 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Fixed port collision for 2735 => 2375. Now on port 2203.
+TRACE 2016/04/04 08:50:59.441074 vagrantUp.go:105: Found port collision: deployed(33000) configured(2204) (    dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Fixed port collision for 33000 => 33000. Now on port 2204.
+)
+2016/04/04 08:50:59.441150 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Fixed port collision for 33000 => 33000. Now on port 2204.
+TRACE 2016/04/04 08:50:59.443377 vagrantUp.go:105: Found port collision: deployed(22) configured(2205) (    dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Fixed port collision for 22 => 2222. Now on port 2205.
+)
+2016/04/04 08:50:59.443454 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Fixed port collision for 22 => 2222. Now on port 2205.
+2016/04/04 08:50:59.508019 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Clearing any previously set network interfaces...
+2016/04/04 08:50:59.571234 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Preparing network interfaces based on configuration...
+2016/04/04 08:50:59.571662 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Adapter 1: nat
+2016/04/04 08:50:59.636705 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Forwarding ports...
+2016/04/04 08:50:59.724379 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: 2735 (guest) => 2203 (host) (adapter 1)
+2016/04/04 08:50:59.724765 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: 33000 (guest) => 2204 (host) (adapter 1)
+2016/04/04 08:50:59.725130 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: 22 (guest) => 2205 (host) (adapter 1)
+2016/04/04 08:50:59.892829 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Running 'pre-boot' VM customizations...
+2016/04/04 08:51:00.011359 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Booting VM...
+2016/04/04 08:51:00.243171 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Waiting for machine to boot. This may take a few minutes...
+2016/04/04 08:51:00.496844 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: SSH address: 127.0.0.1:2205
+2016/04/04 08:51:00.497045 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: SSH username: docker
+2016/04/04 08:51:00.497296 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: SSH auth method: password
+2016/04/04 08:51:23.307914 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Machine booted and ready!
+2016/04/04 08:51:23.308289 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Checking for guest additions in VM...
+2016/04/04 08:51:23.496015 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: The guest additions on this VM do not match the installed version of
+2016/04/04 08:51:23.496048 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: VirtualBox! In most cases this is fine, but in rare cases it can
+2016/04/04 08:51:23.496063 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: prevent things such as shared folders from working properly. If you see
+2016/04/04 08:51:23.496075 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: shared folder errors, please make sure the guest additions within the
+2016/04/04 08:51:23.496086 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: virtual machine match the version of VirtualBox you have installed on
+2016/04/04 08:51:23.496097 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: your host and reload your VM.
+2016/04/04 08:51:23.496124 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: 
+2016/04/04 08:51:23.496137 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Guest Additions Version: 4.3.28 r100309
+2016/04/04 08:51:23.496149 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: VirtualBox Version: 5.0
+2016/04/04 08:51:23.608331 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Running provisioner: docker...
+2016/04/04 08:51:24.695361 vagrantUp.go:122: ==> train_example: Syncing folders to the host VM...
+2016/04/04 08:51:25.065190 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: Mounting shared folders...
+2016/04/04 08:51:25.065637 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: /var/lib/docker/docker_1459785084_2144 => /Users/patrick/workspace/train/Train/train_example
+2016/04/04 08:51:25.389707 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: /var/lib/docker/docker_1459785084_11678 => /Users/patrick/workspace/train/Train/.shipped
+2016/04/04 08:51:25.691501 vagrantUp.go:122:     dockerhost-7722e7db-fa7a-11e5-ab72-0242ac1103f9: /var/lib/docker/docker_build_0f8257e3f35553452f672f2e07ef5fdd => /Users/patrick/workspace/train/Train/train_example
+2016/04/04 08:51:26.054647 vagrantUp.go:122: ==> train_example: Image is already built from the Dockerfile. `vagrant reload` to rebuild.
+2016/04/04 08:51:26.152009 vagrantUp.go:122: ==> train_example: Vagrant has noticed that the synced folder definitions have changed.
+2016/04/04 08:51:26.152041 vagrantUp.go:122: ==> train_example: With Docker, these synced folder changes won't take effect until you
+2016/04/04 08:51:26.152056 vagrantUp.go:122: ==> train_example: destroy the container and recreate it.
+2016/04/04 08:51:26.152169 vagrantUp.go:122: ==> train_example: Starting container...
+2016/04/04 08:51:26.406682 vagrantUp.go:122: ==> train_example: Waiting for container to enter "running" state...
+2016/04/04 08:51:31.664854 vagrantUp.go:122: The container started either never left the "stopped" state or
+2016/04/04 08:51:31.664875 vagrantUp.go:122: very quickly reverted to the "stopped" state. This is usually
+2016/04/04 08:51:31.664885 vagrantUp.go:122: because the container didn't execute a command that kept it running,
+2016/04/04 08:51:31.664892 vagrantUp.go:122: and usually indicates a misconfiguration.
+2016/04/04 08:51:31.664897 vagrantUp.go:122: If you meant for this container to not remain running, please
+2016/04/04 08:51:31.664903 vagrantUp.go:122: set the Docker provider configuration "remains_running" to "false":
+2016/04/04 08:51:31.664909 vagrantUp.go:122:   config.vm.provider "docker" do |d|
+2016/04/04 08:51:31.664919 vagrantUp.go:122:     d.remains_running = false
+2016/04/04 08:51:31.664925 vagrantUp.go:122:   end
+ERROR 2016/04/04 08:51:31.707687 vagrantUp.go:78: vagrant up finished with error: exit status 1
+TRACE 2016/04/04 08:51:31.707769 client.go:114: GET https://api.ciscoshipped.io/projects/7722e7db-fa7a-11e5-ab72-0242ac1103f9?api_token=EVKmPewPFTelyGlPTwJKTwBrciVXJZVh
+TRACE 2016/04/04 08:51:33.035104 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/04/04 08:51:33.035412 config.go:139: Using config file /Users/patrick/workspace/train/Train/.shipped/shipped.ini
+TRACE 2016/04/04 08:51:33.035530 config.go:158: Also using home config file /Users/patrick/.shipped/shipped.ini
+TRACE 2016/04/04 08:51:33.035554 projects.go:304: Changed to project 7722e7db-fa7a-11e5-ab72-0242ac1103f9 directory /Users/patrick/workspace/train/Train
+ERROR 2016/04/04 08:51:33.035606 commands.go:98: Bootstrap failed: exit status 1
