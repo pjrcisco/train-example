@@ -1,0 +1,5 @@
+
+
+# Welcome to Shipped
+
+This is a basic rails 4.2.1 hello world application that is compatible with the Cisco Shipped development platform.
