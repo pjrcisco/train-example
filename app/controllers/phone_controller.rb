@@ -15,6 +15,7 @@ class PhoneController < ApplicationController
   def validate_params
     params.require(:phone)
     params.require(:message)
+    params.require(:email)
   end
 
   private

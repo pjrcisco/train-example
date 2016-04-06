@@ -1,6 +1,7 @@
 require 'net/http'
 require_relative '../SPARK'
 
+module Spark
 module Utility
     
     def self.ip
@@ -47,18 +48,17 @@ module Utility
         headers: Utility.apply_token(token),
         body: payload
       })
-      # puts spark.body
       spark.post!
       spark.results
     end
 
     # private factory method
     def self.spark_it(token, action, params={})
-      base_uri = ip + "#{action}"
+      base_uri = ip + "#{action}"  
       uri      = Utility.encode_url_params(base_uri, params)    
       spark = SPARK.new({
         uri: URI(uri),
-        headers: Utility.apply_token(token)
+        headers: apply_token(token)
       })
       spark.get!
       spark.results
@@ -83,5 +83,5 @@ module Utility
       spark.results
     end
 
-
+end
 end

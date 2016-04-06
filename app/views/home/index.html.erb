@@ -12,6 +12,8 @@
       <form action="/register_phone" method="POST" id="contact-form">
         <input id="formPhoneId" placeholder="Enter Your Phone Number (required)" type="text" name="phone" required>
         <span class='error_id' id='formPhoneIdError'></span><br>
+        <input id="formEmailId" placeholder="Enter Your Spark Email(required)" type="text" name="email" required>
+        <span class='error_id' id='formEmailIdError'></span><br>
         <textarea id="formMessageId" rows="5" name="message" placeholder="Enter Your Message (required)" required></textarea>
         <span class='error_id' id='formMessageIdError'></span><br>
         <input type="button" value="Register" id="submitForm">
@@ -37,8 +39,10 @@
 
 var loadingBackground = document.getElementById("loadingBackground");
 var loadingMsg = document.getElementById("loadingMsg");
+
 var formPhoneError = document.getElementById("formPhoneIdError");
 var formMessageError = document.getElementById("formMessageIdError");
+var formEmailError = document.getElementById("formEmailIdError");
 
 var contactForm = document.getElementById("contact-form");
 var contactSubmit = document.getElementById("submitForm");
@@ -81,6 +85,7 @@ var contactSubmit = document.getElementById("submitForm");
     loadingMsg.innerHTML = "Registering your phone number...";
     formPhoneError.innerHTML = "";
     formMessageError.innerHTML = "";
+    formEmailError.innerHTML = "";
     clearFormFields(contactForm);
   }
   function clearForm(data){
@@ -102,6 +107,7 @@ var contactSubmit = document.getElementById("submitForm");
     loadingBackground.className = "loading-bkg";
       formPhoneError.innerHTML = "";
       formMessageError.innerHTML = "";
+      formEmailError.innerHTML = "";
       sendForm(contactForm, "/register_phone.json", clearForm);
     }
     else{

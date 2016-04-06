@@ -13,19 +13,19 @@ module API
   module Messages
 
     def self.list(token, params={})
-      Utility.spark_it(token, API.list_messages_uri, params)
+      Spark::Utility.spark_it(token, API.list_messages_uri, params)
     end
 
     def self.create(token, params={})
-      Utility.create_spark(token, API.list_messages_uri, params)
+      Spark::Utility.create_spark(token, API.list_messages_uri, params)
     end
 
     def self.get_details(token, id)
-      Utility.spark_it(token, API.list_messages_uri + "/#{id}")
+      Spark::Utility.spark_it(token, API.list_messages_uri + "/#{id}")
     end
 
     def self.delete(token, id)
-      Utility.delete_spark(token, API.list_messages_uri + "/#{id}")
+      Spark::Utility.delete_spark(token, API.list_messages_uri + "/#{id}")
     end
 
   end

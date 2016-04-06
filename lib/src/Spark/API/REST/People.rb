@@ -13,15 +13,15 @@ module API
   module People
 
     def self.list(token, params={})
-      Utility.spark_it(token, API.list_people_uri, params)
+      Spark::Utility.spark_it(token, API.list_people_uri, params)
     end
 
     def self.get_person_details(token, id)
-      Utility.spark_it(token, API.list_people_uri + "/#{id}")
+      Spark::Utility.spark_it(token, API.list_people_uri + "/#{id}")
     end
 
     def self.get_my_details(token)
-      Utility.spark_it(token, API.list_people_uri + "/me")
+      Spark::Utility.spark_it(token, API.list_people_uri + "/me")
     end
 
 

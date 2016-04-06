@@ -6,16 +6,12 @@ class SPARK < APIBase
         @request =  Net::HTTP::Post.new(@uri)
         add_headers
         @request.body = @body.to_json
-
-        #puts "Post -> #{@uri.to_s}"
-       # @request.each_header do |k, v|
-        #  puts "#{k}: #{v}"
-      #  end
-
-        #puts @request.fields
-        #puts @request.body
         @response = http.request @request
-        @results = JSON.parse(@response.body)
+        if @response.code == "200" || @response.code == 200
+          @results = JSON.parse(@response.body)
+        else
+          @results = {"status": @response.code}
+        end
       end
     end
 
@@ -24,7 +20,11 @@ class SPARK < APIBase
         @request = Net::HTTP::Get.new(@uri)
         add_headers
         @response = http.request @request 
-        @results = JSON.parse(@response.body)
+        if @response.code == "200" || @response.code == 200
+          @results = JSON.parse(@response.body)
+        else
+          @results = {"status": @response.code}
+        end
       end 
     end
 
@@ -34,7 +34,7 @@ class SPARK < APIBase
         add_headers
         @request.body = @body.to_json
         @response = http.request @request
-        if @response.code == 200 || @response.code == "200"
+        if @response.code == "200" || @response.code == 200
           @results = JSON.parse(@response.body)
         else
           @results = {"status": @response.code}

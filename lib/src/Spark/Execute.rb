@@ -1,35 +1,12 @@
 require 'src/Utility/Response'
-
-require_relative 'Sessions'
-require_relative 'Routes'
-require_relative '../Client'
+require_relative 'Helper/Methods'
 require 'json'
 
 module Spark
-  def self.execute(params={})
-    records = ::Phone.all
-    records.each do |record|
-      spark_session(record.phone_number, record.message)
-    end
-    Utility::Response.new({
-      "status": 200
-    })
-  end
 
-  def self.headers
-    headers = {
-      "accept": "application/json",
-      "content-type": "application/json"
-    }
-  end
-
-  def self.tropo_session(number, message)
-    session = Tropo::Sessions.new({
-      token: ENV["TROPO_TOKEN"],
-      numbers: number,
-      message: message,
-    })
-    res = Client.post_it(Tropo::Routes.sessions, headers, session.body)
+  def self.send_image(email, message, url)
+    id  = Helper::Methods.get_user_id_by_email(email)
+    res = Helper::Methods.send_message(ENV["SPARK_TOKEN"], message, url, nil, id, nil)
   end
 
 end
