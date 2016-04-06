@@ -16,3 +16,4 @@
 !/log/.keep
 /tmp
 .shipped
+/config/pw.yml

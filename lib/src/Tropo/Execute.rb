@@ -25,7 +25,7 @@ module Tropo
 
   def self.tropo_session(number, message)
     session = Tropo::Sessions.new({
-      token: "55724d51445172465247475a7a72506a5a6b7445747a6e4444554a64584a6c4b7641676568744a6659464b72",
+      token: ENV["TROPO_TOKEN"],
       numbers: number,
       message: message,
     })

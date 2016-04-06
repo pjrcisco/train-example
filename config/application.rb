@@ -21,6 +21,16 @@ module ShippedBuildpackTemplateRails
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.before_configuration do
+      env_file = File.join(Rails.root, 'config', 'pw.yml')
+      YAML.load(File.open(env_file)).each do |key, value|
+        ENV[key.to_s] = value
+      end if File.exists?(env_file)
+    end
+
+
     config.active_record.raise_in_transactional_callbacks = true
+
+
   end
 end
